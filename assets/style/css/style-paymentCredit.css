@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --corBackg: #f4f0e5;
+    --corPrim: #24180F;
+    --corSec: #FFBD4A;
+    --fontPrim: 'Roboto Slab', serif;
+    --fontSec: 'Architects Daughter', cursive;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: var(--corBackg);
+    font-family: var(--fontPrim);
+
+}
+
+/*Estilizando o Botão de retornar*/
+.return {
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    width: 50px;
+    height: 50px;
+    margin: 20px;
+    background-color: #24180F;
+    color: #FFBD4A;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    transition: 0.3s;
+    z-index: 1;
+
+}
+
+.return i {
+    margin-top: 10px;
+}
+
+.return:hover {
+    background-color: #FFBD4A;
+    color: #24180F;
+}
+
+section {
+    background-color: white;
+    padding: 30px 5px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.233);
+    max-width: 70vw;
+
+}
+
+section h1 {
+
+    padding: 20px 10px;
+    text-align: center;
+    font-size: 30px;
+
+}
+
+fieldset {
+    border: none;
+
+}
+
+.row-content2 {
+    display: flex;
+    justify-content: space-between;
+}
+
+/*Estilizando as imagens do cartão*/
+.container:nth-child(1) {
+    display: flex;
+    justify-content: center;
+
+}
+
+.container-img {
+    width: 70px;
+    height: 70px;
+    margin: 0 10px;
+
+}
+
+.container-img:nth-child(1) {
+    padding-top: 15px;
+
+}
+
+.container-img img {
+    width: 100%;
+    
+}
+
+/*Estilizando os inputs*/
+.container input {
+    margin: 10px 10px;
+    width: calc(100% - 20px);
+    height: 70px;
+    border: none;
+    background-color: #ededed;
+    border-radius: 4px;
+    color: #333;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 14px 10px 0 10px;
+
+}
+
+.container input:focus {
+    outline-color: var(--corPrim);
+
+}
+
+.container {
+    position: relative;
+}
+
+/*Deixando os labels dentro dos inputs*/
+.container label {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    color: #9d9d9d;
+    position: absolute;
+    line-height: 70px;
+    top: 10px;
+    left: 20px;
+    user-select: none;
+    pointer-events: none;
+    transition: 0.5s;
+
+}
+
+/*Alterando a posição dos labels dentro dos inputs*/
+.container input:focus ~ label,
+.container input:valid ~ label {
+    left: 20px;
+    top: -10px;
+    color: var(--corPrim); /*Temporário*/
+
+}
+
+.container input:focus {
+    border:none;
+}
+
+input[type='submit'] {
+    margin: 40px 10px;
+    width: calc(100% - 20px);
+    height: 70px;
+    background-color: var(--corPrim);
+    color: white;
+    font-size: 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 0.2s;
+    font-family: var(--fontPrim);
+    letter-spacing: 1.5px;
+    
+}
+
+input[type='submit']:hover {
+    opacity: 0.85;
+
+}
+
+
+
+/*Tornando o formulário responsivo*/
+@media only screen and (max-width: 510px) {
+    
+    section {
+        min-width: 95vw;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    form h1 {
+        font-size: 28px;
+    }
+
+
+    fieldset {
+        padding: 0px;
+        flex-direction: column;
+    }
+
+    input[type='submit'] {
+        width: 100%;
+        margin-left: 0;
+    }
+}

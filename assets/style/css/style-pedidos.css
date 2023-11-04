@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --corBackg: #f4f0e5;
+    --corPrim: #24180F;
+    --corSec: #FFBD4A;
+    --fontPrim: 'Roboto Slab', serif;
+    --fontSec: 'Architects Daughter', cursive;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    font-family: var(--fontPrim);
+    background-color: var(--corBackg);
+
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 5em 0;
+
+}
+
+.hr-main {
+    border: 1px solid var(--corPrim);
+    width: 100%;
+    margin: 4em 0;
+}
+
+main h1 {
+    font-family: var(--fontSec);
+    font-size: 40px;
+}
+
+.pendPedidos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.concluPedidos {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; 
+}
+
+section {
+    /*width: 40em;*/
+    width: 35em;
+    background-color: white;
+    padding: 30px 10px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.233);
+    max-width: 70vw;
+    margin: 2em;
+
+}
+
+section hr {
+    border: 1px solid var(--corPrim);
+}
+
+section h1 {
+    font-family: var(--fontPrim);
+    font-size: 20px;
+
+}
+
+section h2 {
+    margin: 20px 0 0;
+
+}
+
+section h2:first-child {
+    color: #302014;
+    margin: 0;
+}
+
+section p {
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+.check-pedidos {
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.check-pedidos a {
+    color: var(--corPrim);
+    text-decoration: none;
+}
+
+.check-pedidos i {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 50px;
+    transition: 0.15s;
+}
+
+.check-pedidos i:hover {
+    cursor: pointer;
+    background-color: rgb(0, 192, 0);
+    color: white;
+}
+
+#expand-pedidos {
+    cursor: pointer;
+}

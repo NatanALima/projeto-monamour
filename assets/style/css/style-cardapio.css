@@ -1,0 +1,346 @@
+:root {
+    --corBackg: #f4f0e5;
+    --corPrim: #24180F;
+    --corSec: #FFBD4A;
+    --fontPrim: 'Roboto Slab', serif;
+    --fontSec: 'Architects Daughter', cursive;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    font-family: var(--fontPrim);
+    background-color: var(--corBackg);
+    position: relative;
+}
+
+/*estilizando o botão de adicionar conteudo*/
+/*Exclusivo para admin*/
+.btn-add {
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    right: 25px;
+    bottom: 40px;
+    background-color: var(--corPrim);
+    border-radius: 50px;
+    color: var(--corSec);
+    text-align: center;
+    font-size: 40px;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.11);
+    z-index: 99;
+    transition: 0.3s;
+}
+
+.btn-add svg {
+    width: 40px;
+    height: 40px;
+    margin-top: 10px;
+
+}
+
+.btn-add:hover {
+    color: var(--corPrim);
+    background-color: var(--corSec);
+}
+
+main .nav-categ {
+    text-align: center;
+    margin-top: 20px;
+
+}
+
+.nav-categ ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    justify-content: center;
+
+}
+
+.nav-categ ul li {
+    margin-top: 20px;
+}
+
+.nav-categ h3 {
+    font-size: 20px;
+    color: var(--corPrim);
+
+}
+
+
+.nav-categ nav a {
+    color: var(--corPrim);
+    text-decoration: none;
+    padding: 5px 10px;
+    background-color: var(--corSec);
+    margin: 25px 10px 0;
+    width: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.3s;
+
+}
+
+.nav-categ nav a:hover {
+    background-color: var(--corPrim);
+    color: var(--corSec);
+}
+
+.nav-categ nav #edit-categ {
+    background-color: var(--corBackg);
+    border-radius: 50px;
+    padding: 7px 11px;
+
+}
+
+.nav-categ nav #edit-categ:hover {
+    background-color: var(--corPrim);
+    
+}
+
+
+
+
+main h1 {
+    color: var(--corPrim);
+    text-align: center;
+    font-family: var(--fontSec);
+    font-size: 40px;
+    margin: 30px 0 0;
+    text-decoration: underline;
+}
+
+main hr {
+    border: 1px solid var(--corPrim);
+    height: 2px;
+}
+
+main .container {
+    margin: 20px 0px 50px;
+
+}
+
+main .container .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.card-content {
+    background-color: var(--corBackg);
+    padding: 10px 15px;
+    margin: 30px;
+    /*Antes estava 300px*/
+    width: 400px;
+    height: 570px;
+    box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.11);
+    border-radius: 5px;
+    position: relative;
+    transition: .2s;
+
+}
+
+/*Irei pensar se deixarei ou não este simples efeito*/
+.card-content:hover {
+    box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.205);
+
+}
+
+/*Estilização dos botões de editar e excluir conteudo*/
+/*Exclusivo para admin*/
+.card-content .conteudo-btn a{
+    position: absolute;
+    color: var(--corPrim);
+    font-size: 25px;
+    text-align: center;
+    transition: 0.3s;
+
+}
+
+.conteudo-btn a:hover{
+    color: var(--corSec);
+
+}
+
+.conteudo-btn a:nth-child(1) {
+    right: 85%;
+
+}
+
+.conteudo-btn a:nth-child(2) {
+    left: 87%;
+
+}
+
+.card-content .conteudo-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 25px auto;
+    width: 214px;
+    height: 200px;
+    
+    
+}
+
+
+.card-content .conteudo-img img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+
+    
+}
+
+.card-content .conteudo-text,
+.conteudo-buy{
+    text-align: center;
+
+}
+
+.conteudo-text .text-desc {
+    height: 144px;
+    margin: 10px 0px;
+    text-align: left;
+    font-size: 18px;
+}
+
+.conteudo-text .text-nome {
+    color: var(--corPrim);
+    font-family: var(--fontSec);
+    font-size: 28px;
+    font-weight: 800;
+
+}
+
+.conteudo-text .text-preco {
+    font-size: 28px;
+    margin: 10px;
+
+}
+
+.conteudo-buy {
+    margin: 15px 0;
+}
+
+.conteudo-buy a {
+    text-decoration: none;
+    color: var(--corPrim);
+    background-color: var(--corSec);    
+    padding: 5px 10px;
+    font-size: 20px;
+    font-weight: 400;
+    transition: 0.3s;
+    letter-spacing: 0.5px;
+
+}
+
+.conteudo-buy a:hover {
+    background-color: var(--corPrim);
+    color: var(--corSec);
+}
+
+
+.add-card {
+    position: relative;
+
+}
+
+.add-card .conteudo-img{
+    background-color: #efece0;
+
+}
+
+.add-card .conteudo-text p{
+    background-color: #efece0;
+    color: #efece0;
+
+}
+
+.add-card .conteudo-buy a {
+    color: var(--corSec);
+}
+
+.add-card .btn-add {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+
+}
+
+.add-card .btn-add i {
+    margin-top: 10px;
+}
+
+.add-card .opacity-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background-color: var(--corBackg);
+    opacity: 0.5;
+
+}
+
+
+.return-container {
+    position: fixed;
+    text-align: center;
+    bottom: 40px;
+    left: 25px;
+}
+
+
+i#back-to-top {
+    padding: 15px 20px;
+    border-radius: 50%;
+    transition: 0.3s;
+    cursor: pointer;
+    background-color: var(--corPrim);
+    color: var(--corSec);
+    
+}
+
+i#back-to-top:hover {
+    background-color: var(--corSec);
+    color: var(--corPrim);
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.144);
+}
+
+
+@media screen and (max-width:420px) {
+    .nav-categ ul {
+        flex-direction: column;
+    }
+
+    .nav-categ ul li {
+        margin: 10px 0px;
+    }
+
+    .conteudo-text .text-nome,
+    .conteudo-text .text-preco {
+        font-size: 23px;
+    }
+
+
+    .conteudo-text .text-desc {
+        font-size: 15px;
+
+    }
+}
+
+
+

@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --corBackg: #f4f0e5;
+    --corPrim: #24180F;
+    --corSec: #FFBD4A;
+    --fontPrim: 'Roboto Slab', serif;
+    --fontSec: 'Architects Daughter', cursive;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    font-family: var(--fontPrim);
+    background-color: var(--corBackg);
+
+}
+
+/*Estilizando o Botão de retornar ao Menu*/
+.return-menu {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    margin: 20px;
+    background-color: var(--corPrim);
+    color: var(--corSec);
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    transition: 0.3s;
+    z-index: 1;
+
+}
+
+.return-menu i {
+    margin-top: 10px;
+}
+
+.return-menu:hover {
+    background-color: var(--corSec);
+    color: var(--corPrim);
+}
+/*Fim da estilização do botão*/
+.icon-indica {
+    position: absolute;
+    font-size: 30px;
+}
+
+.icon-indica i {
+    color: var(--corPrim);
+}
+
+/*Centralizando o container*/
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.card-container {
+    background-color: var(--corBackg);
+    padding: 10px 15px;
+    margin: 30px;
+    width: 400px;
+    height: 570px;
+    box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.11);
+    position: relative;
+
+}
+
+.card-container:hover {
+    box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.205);
+
+}
+
+
+.card-container .opcao-categ {
+    position: absolute;
+    left: 50%;
+    top: 0%;
+    transform: translate(-50%, -50%);
+
+}
+
+.opcao-categ select {
+    border: 0;
+    outline: 1px solid var(--corSec);
+    padding: 8px 12px;
+    font-size: 16px;
+    background-color: var(--corBackg);
+    font-family: var(--fontPrim);
+    box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.11);
+}
+
+.opcao-categ select:hover {
+    outline: 2px solid var(--corSec);
+}
+
+.card-container .conteudo-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 25px auto;
+    width: 214px;
+    height: 200px;
+    position: relative;
+    
+}
+
+.conteudo-img .add-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+}
+
+.add-img .btn-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+}
+
+.btn-img i {
+    padding-top: 7px;
+    width: 60px;
+    height: 60px;
+    background-color: var(--corPrim);
+    border-radius: 50px;
+    color: var(--corSec);
+    font-size: 40px;
+    transition: 0.3s;
+}
+
+.btn-img i:hover {
+    cursor: pointer;
+    background-color: var(--corSec);
+    color: var(--corPrim);
+}
+
+
+.card-container .conteudo-img img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    
+    
+}
+
+.card-container .conteudo-text,
+.conteudo-buy{
+    text-align: center;
+
+}
+
+.conteudo-text .text-nome {
+    height: 39px;
+
+}
+
+.conteudo-text input:focus,
+.conteudo-text textarea:focus {    
+    outline: none;
+
+}
+
+.text-nome input {
+    width: 100%;
+    height: 100%;
+    color: var(--corPrim);
+    font-family: var(--fontSec);
+    font-size: 28px;
+    font-weight: 800;
+    background-color: var(--corBackg);
+    border: none;
+    border-bottom: 1px solid var(--corPrim);
+    text-align: center;
+}
+
+.conteudo-text .text-desc textarea{
+    font-family: var(--fontPrim);
+    margin: 10px 0px 0px;
+    text-align: left;
+    font-size: 18px;
+    width: 100%;
+    height: 150px;
+    border: 1px solid var(--corPrim);
+    background-color: var(--corBackg);
+    resize: none;
+}
+
+.conteudo-text .text-preco {
+    font-size: 28px;
+    margin: 10px;
+
+}
+
+.text-preco input {
+    text-align: center;
+    font-size: 28px;
+    width: 82px;
+    font-family: var(--fontPrim);
+    background-color: var(--corBackg);
+    border: none;
+    border-bottom: 1px solid var(--corPrim);
+}
+
+/*Aqui consigo ocultar as setas do input number*/
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.conteudo-buy {
+    margin: 15px 0;
+}
+
+.conteudo-buy input {
+    border: none;
+    color: var(--corPrim);
+    background-color: var(--corSec);    
+    padding: 5px 10px;
+    font-size: 20px;
+    font-weight: 400;
+    transition: 0.3s;
+    letter-spacing: 0.5px;
+    font-family: var(--fontPrim);
+    cursor: pointer;
+
+}
+
+.conteudo-buy input:hover {
+    background-color: var(--corPrim);
+    color: var(--corSec);
+
+}
+

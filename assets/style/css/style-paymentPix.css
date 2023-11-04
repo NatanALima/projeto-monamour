@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --corBackg: #f4f0e5;
+    --corPrim: #24180F;
+    --corSec: #FFBD4A;
+    --fontPrim: 'Roboto Slab', serif;
+    --fontSec: 'Architects Daughter', cursive;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    font-family: var(--fontPrim);
+    background-color: var(--corBackg);
+
+}
+
+/*Estilizando o Botão de retornar*/
+.return {
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    width: 50px;
+    height: 50px;
+    margin: 20px;
+    background-color: #24180F;
+    color: #FFBD4A;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    transition: 0.3s;
+    z-index: 1;
+
+}
+
+.return i {
+    margin-top: 10px;
+}
+
+.return:hover {
+    background-color: #FFBD4A;
+    color: #24180F;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+
+}
+
+section {
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.233);
+    max-width: 100%;
+}
+
+section form .img-qrcode {
+    display: flex;
+    align-items: center;
+    margin: 25px auto;
+    width: 350px;
+    height: 300px;
+
+}
+
+section form .img-qrcode img {
+    width: 100%;
+    height: auto;
+
+}
+
+section form .content-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0 20px 0;
+}
+
+section form input[type='submit'] {
+    font-family: var(--fontPrim);
+    font-size: 18px;  
+    background-color: var(--corPrim);
+    color: var(--corSec);
+    border: none;   
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+
+}
+
+section form input[type='submit']:hover {
+    background-color: var(--corSec);
+    color: var(--corPrim);
+}
+
+

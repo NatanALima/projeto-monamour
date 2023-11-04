@@ -1,0 +1,594 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --corBackg: #f4f0e5;
+    --corPrim: #24180F;
+    --corSec: #FFBD4A;
+    --fontPrim: 'Roboto Slab', serif;
+    --fontSec: 'Architects Daughter', cursive;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: var(--corBackg);
+    font-family: var(--fontPrim);
+    background-image: url(../imagens/fundo-cadastro-login-3.png);
+}
+
+/*Estilizando o Botão de retornar*/
+.return {
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    width: 50px;
+    height: 50px;
+    margin: 20px;
+    background-color: var(--corPrim);
+    color: var(--corSec);
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    transition: 0.3s;
+    z-index: 1;
+
+}
+
+.return i {
+    margin-top: 10px;
+}
+
+.return:hover {
+    background-color: var(--corSec);
+    color: var(--corPrim);
+}
+
+
+/*Estilizando o fundo do formulário - Parte branca*/
+section.form-container {
+    background-color: white;
+    padding: 30px 5px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.233);
+    width: 562px;
+    max-width: 70vw;
+    position: relative;
+
+}
+
+section h1 {
+    padding: 20px 10px;
+    text-align: center;
+    font-family: var(--fontSec);
+    font-size: 35px;
+    color: var(--corPrim);
+
+}
+
+/*fieldset*/
+fieldset {
+    border: none;
+    width: 100%;
+    margin-top: 20px;
+    padding: 0px 10px;
+    
+}
+
+/*Estilizando o input*/
+.container input {
+    margin: 10px 10px;
+    width: calc(100% - 20px);
+    height: 70px;
+    border: none;
+    background-color: #ededed;
+    border-radius: 4px;
+    color: #333;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 14px 10px 0 10px;
+
+}
+
+.container input:focus {
+    outline-color: var(--corPrim);
+
+}
+
+.container {
+    position: relative;
+}
+
+/*Deixando os labels dentro dos inputs*/
+.container label {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    color: #9d9d9d;
+    position: absolute;
+    line-height: 70px;
+    top: 10px;
+    left: 20px;
+    user-select: none;
+    pointer-events: none;
+    transition: 0.5s;
+
+}
+
+/*Alterando a posição dos labels dentro dos inputs*/
+.container input:focus ~ label,
+.container input:valid ~ label {
+    left: 20px;
+    top: -10px;
+    color: var(--corPrim); /*Temporário*/
+
+}
+
+.container input:focus {
+    border:none;
+}
+
+
+input[type='submit'] {
+    margin: 40px 10px;
+    width: calc(100% - 20px);
+    height: 70px;
+    background-color: var(--corPrim);
+    color: white;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+    font-family: var(--fontPrim);
+    letter-spacing: 1.5px;
+
+}
+
+input[type='submit']:hover {
+    opacity: 0.85;
+
+}
+
+/*icone para visualizar password*/
+i.olho-pass {
+    color: var(--corPrim);
+    cursor: pointer;
+    left: 90%;
+    top: 40%;
+    position: absolute;
+}
+
+/*Texto voltado ao Login e Cadastro*/
+.msg p, .msg a {
+    text-align: left;
+    margin: 0px 10px;
+    color: black;
+
+}
+
+
+/*
+======================================================================
+~~~~~~~~~~~~~~~~~~~~~~~~ INICIO DA ESTILIZAÇÃO DO CAFEZINHO ~~~~~~~~~~~~~~~~~~~~~~~~
+======================================================================
+*/
+
+
+.content-coffee {
+    position: absolute;
+    left: 69%;
+    bottom: 37%;
+    transform: scale(0.3) rotate(7deg);
+    height: 100%;
+
+}
+
+.content-coffee section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: relative;    
+}
+
+.content-coffee .fumacaContainer #fumaca1 {
+    animation: fumacaXic 2.5s linear 0s infinite normal forwards;
+}
+.content-coffee .fumacaContainer #fumaca2 {
+    animation: fumacaXic 1s linear 0s infinite normal forwards;
+}
+.content-coffee .fumacaContainer #fumaca3 {
+    animation: fumacaXic 2.2s linear 0s infinite normal forwards;
+}
+.content-coffee .fumacaContainer #fumaca4 {
+    animation: fumacaXic 2.3s linear 0s infinite normal forwards;
+}
+.content-coffee .fumacaContainer #fumaca5 {
+    animation: fumacaXic 1.5s linear 0s infinite normal forwards;
+
+}
+
+.content-coffee .fumacaContainer #fumaca2 {
+    margin: 0 45px;
+    
+}
+.content-coffee .fumacaContainer #fumaca3 {
+    margin: 0 90px;
+
+}
+.content-coffee .fumacaContainer #fumaca4 {
+    margin: 0 135px;
+
+}
+.content-coffee .fumacaContainer #fumaca5 {
+    margin: 0 180px;
+
+}
+
+.content-coffee .fumacaContainer {
+    z-index: -1;
+    
+}
+ 
+/*
+======================================================================
+~~~~~~~~~~~~~~~~~~~~~~~~     FUMACA GERAL     ~~~~~~~~~~~~~~~~~~~~~~~~
+======================================================================
+*/
+
+.content-coffee .fumacaContainer #fumaca1,
+.content-coffee .fumacaContainer #fumaca2,
+.content-coffee .fumacaContainer #fumaca3,
+.content-coffee .fumacaContainer #fumaca4,
+.content-coffee .fumacaContainer #fumaca5 {
+    width: 20px;
+}
+
+.content-coffee .fumacaContainer #fumaca1::before,
+.content-coffee .fumacaContainer #fumaca1::after,
+.content-coffee .fumacaContainer #fumaca2::before,
+.content-coffee .fumacaContainer #fumaca2::after,
+.content-coffee .fumacaContainer #fumaca3::before,
+.content-coffee .fumacaContainer #fumaca3::after,
+.content-coffee .fumacaContainer #fumaca4::before,
+.content-coffee .fumacaContainer #fumaca4::after,
+.content-coffee .fumacaContainer #fumaca5::before,
+.content-coffee .fumacaContainer #fumaca5::after {
+    width: 10px;
+    height: 10px;
+    
+}
+
+
+
+/*
+======================================================================
+~~~~~~~~~~~~~~~~~~~~~~~~ DESTINADA A FUMACA 1 ~~~~~~~~~~~~~~~~~~~~~~~~
+======================================================================
+*/
+.content-coffee .fumacaContainer #fumaca1 {
+    position: absolute;
+    height: 40px;
+    background-color: rgb(51, 32, 15);
+    top: 27%;
+    border-radius: 10%;
+    /*border: 10px solid rgb(51, 32, 15); */
+
+}
+
+.content-coffee .fumacaContainer #fumaca1::before {
+    display: block;
+    position: absolute;
+    content: "";
+    border-radius: 100%;
+    top: -20%;
+    background-color: rgb(51, 32, 15);
+    border: 5px solid rgb(51, 32, 15);
+
+}
+
+.content-coffee .fumacaContainer #fumaca1::after {
+    display: block;
+    position: absolute;
+    content: "";
+    border-radius: 100%;
+    bottom: -20%;
+    background-color: rgb(51, 32, 15);
+    border: 5px solid rgb(51, 32, 15);
+
+}
+
+/* 
+======================================================================
+~~~~~~~~~~~~~~~~~~~~~~~~ DESTINADA A FUMACA 2 ~~~~~~~~~~~~~~~~~~~~~~~~
+======================================================================
+*/
+
+.content-coffee .fumacaContainer #fumaca2 {
+    position: absolute;
+    height: 60px;
+    background-color: rgb(51, 32, 15);
+    top: 22%;
+    
+    border-radius: 10%;
+    /* 
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: rgb(51, 32, 15);
+    top: 25%;
+    left: 49%;
+    border-radius: 50%;
+    border: 10px solid rgb(51, 32, 15); 
+    */
+}
+
+.content-coffee .fumacaContainer #fumaca2::before {
+    display: block;
+    position: absolute;
+    content: "";
+    border-radius: 100%;
+    top: -15%;
+    background-color: rgb(51, 32, 15);
+    border: 5px solid rgb(51, 32, 15);
+}
+
+.content-coffee .fumacaContainer #fumaca2::after {
+    display: block;
+    position: absolute;
+    content: "";
+    border-radius: 100%;
+    bottom: -15%;
+    background-color: rgb(51, 32, 15);
+    border: 5px solid rgb(51, 32, 15);
+}
+
+/* 
+======================================================================
+~~~~~~~~~~~~~~~~~~~~~~~~ DESTINADA A FUMACA 3 ~~~~~~~~~~~~~~~~~~~~~~~~
+======================================================================
+*/
+
+.content-coffee .fumacaContainer #fumaca3 {
+    position: absolute;
+    height: 60px;
+    background-color: rgb(51, 32, 15);
+    top: 20%;
+    
+    border-radius: 10%;
+    /* 
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: rgb(51, 32, 15);
+    top: 25%;
+    left: 49%;
+    border-radius: 50%;
+    border: 10px solid rgb(51, 32, 15); 
+    */
+}
+
+.content-coffee .fumacaContainer #fumaca3::before {
+    display: block;
+    position: absolute;
+    content: "";
+    /* width: 10px;
+    height: 10px; */
+    border-radius: 100%;
+    top: -15%;
+    background-color: rgb(51, 32, 15);
+    border: 5px solid rgb(51, 32, 15);
+}
+
+.content-coffee .fumacaContainer #fumaca3::after {
+    display: block;
+    position: absolute;
+    content: "";
+    border-radius: 100%;
+    bottom: -15%;
+    background-color: rgb(51, 32, 15);
+    border: 5px solid rgb(51, 32, 15);
+}
+
+/* 
+======================================================================
+~~~~~~~~~~~~~~~~~~~~~~~~ DESTINADA A FUMACA 4 ~~~~~~~~~~~~~~~~~~~~~~~~
+======================================================================
+*/
+
+.content-coffee .fumacaContainer #fumaca4 {
+    position: absolute;
+    height: 60px;
+    background-color: rgb(51, 32, 15);
+    top: 22%;
+    
+    border-radius: 10%;
+    /* 
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: rgb(51, 32, 15);
+    top: 25%;
+    left: 49%;
+    border-radius: 50%;
+    border: 10px solid rgb(51, 32, 15); 
+    */
+}
+
+.content-coffee .fumacaContainer #fumaca4::before {
+    display: block;
+    position: absolute;
+    content: "";
+    border-radius: 100%;
+    top: -15%;
+    background-color: rgb(51, 32, 15);
+    border: 5px solid rgb(51, 32, 15);
+}
+
+.content-coffee .fumacaContainer #fumaca4::after {
+    display: block;
+    position: absolute;
+    content: "";
+    border-radius: 100%;
+    bottom: -15%;
+    background-color: rgb(51, 32, 15);
+    border: 5px solid rgb(51, 32, 15);
+}
+
+/* 
+======================================================================
+~~~~~~~~~~~~~~~~~~~~~~~~ DESTINADA A FUMACA 5 ~~~~~~~~~~~~~~~~~~~~~~~~
+======================================================================
+*/
+
+.content-coffee .fumacaContainer #fumaca5 {
+    position: absolute;
+    height: 40px;
+    background-color: rgb(51, 32, 15);
+    top: 27%;
+    border-radius: 10%;
+
+}
+
+.content-coffee .fumacaContainer #fumaca5::before {
+    display: block;
+    position: absolute;
+    content: "";
+    border-radius: 100%;
+    top: -15%;
+    background-color: rgb(51, 32, 15);
+    border: 5px solid rgb(51, 32, 15);
+}
+
+.content-coffee .fumacaContainer #fumaca5::after {
+    display: block;
+    position: absolute;
+    content: "";
+    border-radius: 100%;
+    bottom: -15%;
+    background-color: rgb(51, 32, 15);
+    border: 5px solid rgb(51, 32, 15);
+}
+
+/* 
+======================================================================
+~~~~~~~~~~~~~~~~~~~~~~~~ FIM DA FUMACA AQUI ! ~~~~~~~~~~~~~~~~~~~~~~~~
+======================================================================
+*/
+
+.xicContainer {
+    position: relative;
+
+}
+
+.xicara {
+    width: 200px;
+    height: 200px;
+    background-color: rgb(145, 94, 50);
+    border-radius: 10% 10% 100% 100%;
+    border: 10px solid rgb(51, 32, 15);
+}
+
+.alcaxic {
+    /* Antes: 150px */
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    top: 7%;
+    left: 63%;
+    border-radius: 30%;
+    /* top: 12%;
+    left: 52%;
+    border-radius: 30%; */
+    border: 10px solid rgb(51, 32, 15);
+    z-index: -1;
+
+}
+/*
+======================================================================
+~~~~~~~~~~~~~~~~~~~~~~~~ FIM DA ESTILIZAÇÃO DO CAFEZINHO ~~~~~~~~~~~~~~~~~~~~~~~~
+======================================================================
+*/
+
+/*Definindo cores para erro de campos vazios */
+.InputError {
+    outline: 2px solid red;
+
+}
+
+.InputError:focus {
+    outline: 2px solid red!important;
+}
+
+.labelError {
+    color: red!important;
+}
+
+.InputError:focus ~ label,
+.InputError:valid ~ label {
+    color: red!important;
+}
+
+
+@keyframes fumacaXic {
+    0% {
+        top: 30%;
+
+    }
+
+    50% {
+        top: 25%;
+        opacity: 50%;
+    }
+
+    100% {
+        top: 20%;
+        opacity: 0%;
+    }
+
+
+}
+
+
+/*Tornando o formulário responsivo*/
+@media only screen and (max-width: 670px) {
+    .content-coffee {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 510px) {
+    section {
+        min-width: 95vw;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    section img {
+        display: none;
+    }
+
+    fieldset {
+        padding: 0px;    
+    }
+
+    input[type='submit'] {
+        width: 100%;
+        margin-left: 0;
+    }
+}

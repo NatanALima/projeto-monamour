@@ -1,0 +1,439 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --corBackg: #f4f0e5;
+    --corPrim: #24180F;
+    --corSec: #FFBD4A;
+    --fontPrim: 'Roboto Slab', serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: 0.3s;
+
+}
+
+body {
+    font-family: var(--fontPrim);
+    background-color: var(--corBackg);
+
+}
+
+main {
+    min-height: 50vh;
+    margin: 10em 14em;
+    padding: 17px 17px 17px 0px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0px 0px 12px 2px rgba(0, 0, 0, 0.158);
+    transition: 0.3s;
+}
+
+main .container {
+    display: flex;
+    /*flex-wrap: wrap;*/
+    color: var(--corPrim);
+
+}
+
+main .container .nav-content {
+    width: 300px;
+}
+
+main .container .nav-content article.infoUser {
+    margin: 20px 0px 70px;
+    padding: 0 20px;
+}
+
+main .container .nav-content article.action-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+main .container .nav-content article.action-btn button {
+    font-family: var(--fontPrim);
+    font-size: 17px;
+    font-weight: 500;
+    margin: 5px 0;
+    padding: 10px 20px;
+    border: none;
+    color: var(--corPrim);
+    cursor: pointer;
+    text-align: left;
+    background: linear-gradient(to left, white 50%, var(--corPrim) 50%) right;
+    background-size: 200%;
+    transition: 0.25s;
+
+}
+
+main .container .nav-content article.action-btn button:hover {
+    background-position: left;
+    color: var(--corSec);
+
+}
+
+main .container .nav-content article.action-btn button.active {
+    background: var(--corPrim);
+    color: var(--corSec);
+}
+/*FIM DE MENU DE NAVEGAÇÃO PARA CONTEUDO*/
+
+/*INICIO DE ESTILIZAÇÃO PARA FORMULÁRIOS DE PREENCHIMENTO*/
+main .container article.content {
+    padding: 20px;
+
+}
+
+main .container article.content section {
+    background: white;
+    max-width: 70vw;
+
+}
+
+main .container article.content section form {
+    padding: 20px 5px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 12px 2px rgba(0, 0, 0, 0.062);
+    
+}
+
+main .container article.content section h1 {
+    margin: 0 0 20px;
+    font-size: 25px;
+}
+
+main .container article.content section fieldset.row-content2,
+main .container article.content section fieldset.row-content3 {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+main .container article.content section fieldset {
+    border: none; 
+}
+
+main .container article.content section .containerInput {
+    position: relative;
+}
+
+main .container article.content section .containerInput input {
+    margin: 17px 10px;
+    width: calc(100% - 20px);
+    height: 45px;
+    border: none;
+    background-color: #f1f1f1;
+    border-radius: 2px;
+    color: var(--corPrim);
+    font-size: 17px;
+    font-weight: 700;
+    padding: 0px 10px;
+
+}
+
+main .container article.content section fieldset.row-content3 .containerInput input {
+    max-width: 154px;
+
+
+}
+
+main .container article.content section .containerInput input:disabled {
+    background-color: white;
+    color: rgb(63, 63, 63);
+
+}
+
+main .container article.content section .containerInput input:focus {
+    outline-color: var(--corPrim);
+    border: none;
+}
+
+
+main .container article.content section .containerInput label {
+    position: absolute;
+    top: -10px;
+    text-transform: uppercase;
+    margin-left: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--corPrim);
+    user-select: none;
+    pointer-events: none;
+    transition: 0.5s;
+
+}
+
+/*icone para visualizar password*/
+i.olho-pass {
+    color: var(--corPrim);
+    left: 85%;
+    top: 40%;
+    position: absolute;
+}
+
+main .container article.content section fieldset.btn-edit {
+    display: none;
+
+}
+
+main .container article.content section fieldset.btn-edit input[type='submit'] {
+    margin: 0 10px;
+    width: calc(100% - 20px);
+    height: 45px;
+    background-color: #24180F;
+    color: white;
+    font-size: 17px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: 0.2s;
+    font-family: 'Roboto Slab', serif;
+    letter-spacing: 1.5px;
+}
+
+main .container article.content section fieldset.btn-edit input[type='submit']:hover,
+main .container article.content section .divOpEdit button:hover {
+    opacity: 0.85;
+    
+}
+
+main .container article.content section .divOpEdit {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin: 40px 10px;
+}
+
+main .container article.content section .divOpEdit button {
+    font-family: var(--fontPrim);
+
+    font-size: 17px;
+    font-weight: 400;
+    height: 45px;
+    padding: 10px 20px;
+    border: none;
+    color: var(--corPrim);
+    cursor: pointer;
+    background-color: #362A70;
+    color: white;
+    transition: 0.25s;  
+    letter-spacing: 1.5px;
+
+}
+
+
+/*INICIO DE ESTILIZAÇÃO PARA MEUS PEDIDOS*/
+main .container article.content section .pedUser-container{
+    /*padding: 20px 5px;*/
+    box-shadow: 0px 0px 12px 2px rgba(0, 0, 0, 0.062);
+    
+}
+
+article.content section .pedUser-container .pedUser-info {
+    margin: 20px 0;
+    width: 500px;
+}
+
+article.content section .pedUser-container .pedUser-info h2 {
+    font-size: 16px;
+
+}
+
+article.content section .pedUser-container .pedUser-info .pedUser-info-top,
+section .pedUser-container .pedUser-info .pedUser-info-top div {
+    display: flex;
+
+}
+
+article.content section .pedUser-container .pedUser-info .pedUser-info-top {
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f0f0f0;
+    padding: 10px 20px;
+
+}
+
+section .pedUser-container .pedUser-info .pedUser-info-top div span.tipo_pag {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30px;
+
+}
+
+section .pedUser-container .pedUser-info .pedUser-info-top div span.tipo_pag img {
+    width: 40px;
+}
+
+
+section .pedUser-container .pedUser-info .pedUser-info-top div span:last-child {
+    margin: 0 5px;
+}
+
+section .pedUser-container .pedUser-info .pedUser-info-top .pedUser-info-status {
+    padding: 5px;
+
+}
+
+section .pedUser-container .pedUser-info .pedUser-info-top .status-camin {
+    color: white;
+    background-color: rgb(0, 180, 0);
+    font-weight: 500;
+
+    
+}
+
+section .pedUser-container .pedUser-info .pedUser-info-top .status-pend {
+    background-color: rgb(251 213 0);
+    font-weight: 500;
+
+}
+
+article.content section .pedUser-container .pedUser-info .pedUser-content {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+
+}
+
+section .pedUser-container .pedUser-info .pedUser-content .img-prod img {
+    width: 100px;
+    height: 100px;
+    background-position: center;
+    background-size: cover;
+    
+}
+
+section .pedUser-container .pedUser-info .pedUser-content .pedUser-text {
+    margin-left: 20px;
+}
+
+section .pedUser-container .pedUser-info .pedUser-content .pedUser-text .pedUser-name {
+    font-weight: 500;
+}
+
+
+
+/*Tornando o formulário responsivo*/
+@media only screen and (max-width: 1150px) {
+    main {
+        margin: 10em 2em;
+        
+        padding: 17px 0;
+    }   
+
+    main .container .nav-content {
+        width: 200px;
+    }
+}
+@media only screen and (max-width: 830px) {
+
+
+    main {
+        width: 100%;
+        justify-content: center;
+        margin: 0;
+
+    }
+
+    main .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    main .container .nav-content {
+        width: 100%;
+        border-bottom: 3px solid var(--corPrim);
+    }
+
+    main .container .nav-content article.infoUser {
+        width: 50%;
+        margin: 20px 0;
+    } 
+
+    main .container .nav-content article.action-btn {
+        display: flex;
+        justify-content: space-between;
+        
+
+    }
+
+    main .container .nav-content article.action-btn button {
+        background: white;
+
+    }
+
+    main .container .nav-content article.action-btn button:hover {
+        background-color: var(--corPrim);
+    }
+
+    main .container article.content section {
+        margin-top: 5px;
+    }
+
+    article.content section .pedUser-container .pedUser-info {
+        width: 100%;
+    }
+
+
+
+}
+@media only screen and (max-width: 510px) {
+
+    .container-dados section {
+        margin: 20px 0;
+    }
+
+    main .container article.content {
+        padding: 0;
+    
+    }
+    
+    section {
+        min-width: 95vw;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    form h1 {
+        font-size: 28px;
+    }
+
+
+    fieldset {
+        padding: 0px;
+        flex-direction: column;
+
+    }
+
+    .row-content3 {
+        flex-direction: row;
+
+    }
+
+    .row-content3 input {
+        width: 100%;
+    }
+
+    div#check {
+        width: 100%;
+
+    }
+
+    input[type='submit'] {
+        width: 100%;
+        margin-left: 0;
+    }
+}

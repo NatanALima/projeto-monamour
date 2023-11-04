@@ -1,0 +1,416 @@
+/*Adicionando Fontes para o site*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --corBackg: #f4f0e5;
+    --corPrim: #24180F;
+    --corSec: #FFBD4A;
+    --fontPrim: 'Roboto Slab', serif;
+    --fontSec: 'Architects Daughter', cursive;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    font-family: var(--fontPrim);
+    background-color: var(--corBackg);
+
+}
+
+/*Estilizando o main do site*/
+main {
+    font-weight: 400;
+    background-color: var(--corBackg);
+    
+}
+
+/*Estilos para os Slides*/
+/*Definindo a altura dos slides*/
+.carousel-item {
+    height: 800px;
+    background: #000;
+    color: white;
+    position: relative;
+}
+
+.container {
+    position: absolute;
+    /*bottom: 0;
+    left: 0;
+    right: 0;*/
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding-bottom: 50px;
+}
+
+/*Definindo a configuração principal do container*/
+.container h1, .container p {
+    background-color: var(--corPrim);
+    padding: 5px 10px;
+    font-family: var(--fontSec);
+    margin-bottom: 20px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    width: 50%;
+    user-select: none;
+
+}
+
+.container p {
+    font-size: 20px;
+    line-height: 25px;
+}
+
+.container strong {
+    color: var(--corSec);
+}
+
+/*Alterando individualmente a posição dos containeres do slide*/
+#container-pt2 {
+    top: 30%;
+}
+
+#container-pt3 {
+    top: 55%;
+    left: 82%;
+}
+
+#container-pt4 {
+    top: 65%;
+}
+
+/*Estilizando as imagens dos slides*/
+.overlay-image {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-position: center;
+    background-size: cover;
+}
+
+/*Alteração na Setinha do mouse*/
+.carousel-control-prev,
+.carousel-control-next:hover {
+    cursor: pointer;
+}
+/*Fim*/
+
+/*Conteudo sobre a info da padaria incluindo videos*/
+/*Conteudo em questão: "Um pouco de nossa especialidade"*/
+.info-padaria h1 {
+    background-color: var(--corBackg);
+}
+.info-padaria .content {
+    display: flex;
+    justify-content: center;
+    /*margin: 50px 0;*/
+    padding: 20px 50px;
+    margin-bottom: 5em;
+    background-color: var(--corBackg);
+    /*background-color: #ffbd4a27;*/
+    box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.185);
+}
+
+.content-text {
+    width: 50%;
+    margin-top: 30px;
+    margin-right: 10px;
+
+}
+
+.content-media {
+    width: 50%;
+}
+
+.content-media video {
+    border-radius: 5px;
+}
+.content .content-text p {
+    margin-top: 10px;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+/*Conteudo invertido*/
+.reverse-content {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.reverse-content .content-text {
+    margin-left: 20px;
+}
+
+
+/*Fim do Conteudo "Um pouco de nossa especialidade"*/
+
+.fundo-bg {
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    width: 100%;
+    height: 900px;
+    position: relative;
+    
+}
+
+.fundo-bg div {
+    background-color: #000;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+}
+
+.fundo-bg h1 {
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+    text-shadow: 1px 1px 1px black;
+    letter-spacing: 5px;
+    text-align: center;
+}
+
+/*Avaliação dos clientes*/
+.bg-avalCli {
+    background-image: url(../imagens/fundo-teste-7.png);
+    background-size: 50vh;
+}
+
+.avalCli {
+    font-size: 18px;
+    padding: 20px;
+    width: 80%;
+    margin: auto;
+}
+
+/*Apagar depois*/
+.avalCli p {
+    color: #72331a;
+}
+
+.avalCli h1,
+.info-padaria h1,
+.about h1 {
+    color: var(--corPrim);
+    text-align: center;
+    font-family: var(--fontSec);
+    font-size: 40px;
+    margin: 30px 0;
+
+}
+
+/*Em avaliação - Testes*/
+.avalLeft,
+.avalRight {
+    background-color: var(--corBackg);
+    padding: 10px;
+    box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.075);
+    border-radius: 5px;
+}
+
+.avalLeft {
+    width: 40%;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.avalLeft p:nth-child(1) {
+    font-weight: bold;
+
+}
+
+.avalLeft p:nth-child(2) {
+    text-align: end;
+}
+
+.avalRight {
+    font-style: italic;
+    width: 40%;
+    margin-left: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.avalRight p:nth-child(1) {
+    font-weight: bold;
+
+}
+
+.avalRight p:nth-child(2) {
+    text-align: end;
+}
+
+/*About*/
+.about-content {
+    margin: auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--corPrim);
+
+}
+
+.about-content #about-img {
+    width: 40%;
+    height: 700px;
+    background-position: center center;
+    background-size: cover;
+    margin-right: 10px;
+}
+
+
+.about-content #about-text {
+    /*margin-top: 5em;*/
+    color: white;
+    width: 60%;
+    
+}
+
+.about-content #about-text h1 {
+    color: var(--corSec);
+    
+}
+
+.about-content #about-text p{
+    font-weight: 400;
+    font-size: 23px;
+    margin-bottom: 80px;
+    padding: 15px 20px;
+    letter-spacing: 1.5px;
+}
+
+main hr {
+    border: 0;
+    height: 2px;
+    background-image: linear-gradient(to right, transparent, var(--corPrim), transparent);
+}
+
+
+.aviso-cardapio {
+    text-align: center;
+    font-family: var(--fontSec);
+    width: 90%;
+    margin: 4em auto;
+    padding: 20px 0;
+}
+
+.aviso-cardapio h1 {
+    font-size: 40px;
+    color: var(--corPrim);
+}
+.aviso-cardapio h2 {
+    color: #362517;
+    font-family: var(--fontPrim);
+    font-size: 28px;
+
+}
+
+#back-to-top {
+    margin: 20px 0;
+    
+}
+
+i#back-to-top {
+    padding: 20px 27px;
+    border-radius: 50%;
+    transition: 0.3s;
+    cursor: pointer;
+    color: #362517;
+    
+}
+
+i#back-to-top:hover {
+    background-color: #362517;
+    color: white;
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.144);
+}
+
+/*Tornando todo o site responsivo */
+@media screen and (max-width:820px) {
+    .about-content #about-text p {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    main .info-padaria .content {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 20px 0px;
+        
+    }
+
+    .info-padaria .content-text {
+        width: 100%;
+        margin: 30px 10px 20px;
+
+    }
+
+    .info-padaria .content-text h2 {
+        text-align: center;
+
+    }
+
+    .info-padaria .content-media {
+        width: 100%;
+
+    }
+
+    .content-media video {
+        border-radius: 0;
+    }
+
+    main .avalRight, .avalLeft {
+        margin: 20px auto;
+        width: 100%;
+
+    }
+
+    main .avalCli {
+        width: 100%;
+
+    }
+
+    .fundo-bg h1 {
+        font-size: 30px;
+
+    }
+
+    .about-content #about-img {
+        display: none;
+
+    }
+
+    .about-content #about-text {
+        width: 100%;
+
+    }
+
+    .about-content #about-text p {
+        font-size: 23px;
+        
+    }
+
+}
+
+
+

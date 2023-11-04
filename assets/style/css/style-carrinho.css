@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --corBackg: #f4f0e5;
+    --corPrim: #24180F;
+    --corSec: #FFBD4A;
+    --fontPrim: 'Roboto Slab', serif;
+    --fontSec: 'Architects Daughter', cursive;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    font-family: var(--fontPrim);
+    background-color: var(--corBackg);
+
+}
+
+/*Estilizando o Botão de retornar ao Menu*/
+.return-menu {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    margin: 20px;
+    background-color: var(--corPrim);
+    color: var(--corSec);
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    transition: 0.3s;
+    z-index: 1;
+
+}
+
+.return-menu i {
+    margin-top: 10px;
+}
+
+.return-menu:hover {
+    background-color: var(--corSec);
+    color: var(--corPrim);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+
+}
+
+
+section {
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.233);
+    max-width: 100%;
+
+}
+
+section h1 {
+
+    padding: 10px 10px;
+    text-align: center;
+    font-size: 30px;
+
+}
+
+section a {
+    text-decoration: none;
+
+}
+
+table {
+    display: block;
+    border-collapse: separate;
+
+}
+
+
+table th:first-child{
+    text-align: left;
+    
+}
+
+section table td:first-child {
+    width: 400px;
+    display: flex;
+    align-items: center;
+
+
+}
+
+section table td:first-child img {
+    width: 100px;
+    height: 100px;
+    padding: 5px;
+
+}
+
+table td:first-child p {
+    margin: 0px 10px;
+    
+}
+
+/*Td do Preço*/
+table td:first-child + td {
+    width: 100px;
+    text-align: center;
+
+}
+
+/*Td da Quantidade*/
+table td:first-child + td + td {
+    text-align: center;
+    width: 150px;
+
+}
+
+/*Td do Total*/
+table td:first-child + td + td + td {
+    width: 100px;
+    text-align: center;
+} 
+
+.container-compras h2 {
+    margin: 20px 0px;
+
+}
+
+/*Estilizando os botões de quantidade*/
+
+table td i {
+    margin: 0 10px;
+    color: var(--corPrim);
+    cursor: pointer;
+    transition: .2s;
+    font-size: 18px;
+}
+
+table td i:hover {
+    color: var(--corSec);
+
+}
+
+/*Estilizando os botões de opções*/
+.opcao-btn {
+    margin: 10px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+.opcao-btn a:first-child,
+.opcao-btn a:last-child {
+    color: var(--corPrim);
+    padding: 10px;
+    transition: .3s;
+    font-weight: 500;
+
+}
+
+.opcao-btn a:first-child:hover {
+    color: #ffffff;
+    background-color: rgb(0, 122, 0);
+}
+
+.opcao-btn a:last-child:hover{
+    background-color: rgb(124, 3, 3);
+    color: white; 
+
+}
+
+.next-pay {
+    margin: 20px 0px;
+    text-align: center;
+}
+
+.next-pay a{
+    color: var(--corPrim);
+    font-size: 22px;
+    font-weight: 400;
+    padding: 10px 15px;
+    background-color: var(--corSec);
+    transition: .3s;
+
+}
+
+.next-pay a:hover {
+    background-color: var(--corPrim);
+    color: var(--corSec);
+}
+
+@media only screen and (max-width: 830px) {
+
+    .container-compras section {
+        min-width: 95vw;
+    }
+
+    table tr:first-child, th {
+        display: none;
+
+    }
+
+    tbody {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+
+    table tr {
+        display: flex;
+        flex-direction: column;
+        margin: 20px auto;
+        width: 80vw;
+        border: 1px solid var(--corPrim);
+
+    }
+    
+    table td {
+        display: flex;
+        justify-content: center;
+        
+    }
+
+
+
+    table td:first-child {
+        width: auto !important;
+        flex-direction: column;
+    }
+
+    table td:first-child + td,
+    table td:first-child + td + td,
+    table td:first-child + td + td + td {
+        width: auto;
+        text-align: center;
+
+    }
+
+}

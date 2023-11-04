@@ -1,0 +1,32 @@
+/* 
+.anime {
+	opacity: 0;
+	transform: translate3D(0px, 50px, 0px);
+} 
+*/
+
+.anime-top {
+    opacity: 0;
+	transform: translate3D(0px, 50px, 0px); 
+}
+
+.anime-bottom {
+    opacity: 0;
+	transform: translate3D(0px, -50px, 0px); 
+}
+
+.anime-left {
+    opacity: 0;
+	transform: translate3D(-50px, 0px, 0px);  
+}
+
+.anime-right {
+    opacity: 0;
+	transform: translate3D(50px, 0px, 0px);  
+}
+
+.anime-init {
+	opacity: 1;
+	transform: translate3D(0px, 0px, 0px);
+	transition: .3s all ease;
+}

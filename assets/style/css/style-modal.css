@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --corBackg: #f4f0e5;
+    --corPrim: #24180F;
+    --corSec: #FFBD4A;
+    --fontPrim: 'Roboto Slab', serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+.modal-add {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(73, 73, 73, 0.342);
+    z-index: 1;
+
+}
+
+.modal-add .msg-add {
+    position: relative;
+    box-shadow: 0px 0px 16px 5px #54545414
+
+}
+
+.modal-add i {
+    font-size: 25px;
+    color: var(--corPrim);
+    position: absolute;
+    top: 5%;
+    left: 94%;
+
+}
+
+.modal-add i:hover {
+    color:rgb(197, 6, 6);
+    cursor: pointer;
+}
+
+.modal-add section .info-categ {
+    flex-direction: column;
+
+}
+
+.modal {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(73, 73, 73, 0.342);
+    z-index: 1;
+
+}
+
+.modal .msg {
+    position: relative;
+    box-shadow: 0px 0px 16px 5px #54545414;
+    background-color: white;
+    margin: 35px 0;
+    padding: 30px 15px;
+    border-radius: 2px;
+    width: 562px;
+    max-width: 70vw;
+
+}
+
+
+.modal .msg p {
+    font-size: 17px;
+    
+
+}
+
+.modal .msg span {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 20px 0px 0px 0px;
+
+}
+
+.modal .msg span a {
+    margin: 10px;
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 2px;
+
+}
+
+.modal .msg span a:first-child {
+    background-color: #196670;
+    
+}
+
+.modal .msg span a:last-child {
+    background-color: rgb(124, 3, 3);
+
+}
+
+.modal .msg span a:first-child:hover {
+    background-color: #1f7985;
+
+}
+
+.modal .msg span a:last-child:hover {
+    background-color: rgb(150, 3, 3);
+}

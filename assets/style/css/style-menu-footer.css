@@ -1,0 +1,349 @@
+/*Adicionando Fontes para o site*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --corBackg: #f4f0e5;
+    --corPrim: #24180F;
+    --corSec: #FFBD4A;
+    --fontPrim: 'Roboto Slab', serif;
+    --fontSec: 'Architects Daughter', cursive;
+}
+
+/*Menu de site*/
+header {
+    text-align: center;
+    background-image: linear-gradient(to top, var(--corPrim), #291b11, #302014);
+    font-family: var(--fontPrim);
+
+    /*Caso queira fazer os menus de outra forma, apenas remova isso aqui*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+
+header .logo img{
+    width: 120px;
+    height: 120px;
+    margin: 10px 50px;
+
+}
+
+/*Tornando Flex a div que contém tanto os menus como o login/registro*/
+header .nav-login {
+    display: flex;
+    font-size: 18px;
+    margin: 15px;
+
+}
+
+/*removendo os estilos de listas e as definindo como flex*/
+.nav-login ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    
+
+}
+
+.nav-login li {
+
+    margin: 10px 10px;
+}
+
+.nav-login a {
+    text-decoration: none;
+    color: var(--corSec);
+    padding: 8px;
+    transition: 0.3s;
+}
+
+.nav-login a:hover {
+    color: #fae3ba;
+    
+}
+
+.nav-login i {
+    font-size: 25px;
+    width: 40px;
+    height: 40px;
+    padding-top: 8px;
+    border-radius: 50px;
+    transition: .2s;
+
+}
+
+.nav-login i:hover {
+    background-color: var(--corSec);
+    color: var(--corPrim);
+}
+
+.nav-login ul li {
+    position: relative;
+
+}
+
+/*"Animando" a listas com subitens*/
+/*dp -> DropDown menu*/
+.dp-li {
+    transition: .3s;
+
+}
+
+.dp-li:hover {
+    padding: 10px 0px;
+    background: var(--corPrim);
+
+}
+
+/*Estilo destinado ao Submenu*/
+.nav-login ul ul {
+    display: none;
+    position: absolute;
+    left: 0;
+    background-color: var(--corPrim);
+    margin: 10px 0px 0px;
+    width: 150px;
+    z-index: 12;
+
+}
+
+.nav-login ul li:hover ul {
+    display: block;
+
+}
+
+.nav-login ul ul hr {
+    border: 1px solid var(--corSec);
+}
+
+.nav-login ul ul li a {
+    display: inline-block;
+
+}
+/*Fim do estilo destinado ao submenu*/
+
+.nav-login p {
+    color: var(--corSec);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/*Botão responsivo*/
+header .menu-icon {
+    font-size: 35px;
+    cursor: pointer;
+    color: var(--corSec);
+    display: none;
+    margin-right: 30px;
+    transition: .3s;
+}
+
+header .menu-icon:hover {
+    color: #fae3ba;
+}
+
+/*Estilo destinado a quantidade de itens presentes no carrinho*/
+.Cart-li {
+    position: relative;
+
+}
+
+.Cart-li .count-Cart {
+    position: absolute;
+    top: 4%;
+    left: 20%;
+    color: var(--corSec);
+    padding: 0px 6px;
+    background-color: var(--corPrim);
+    border-radius: 50px;
+    font-size: 13px;
+    user-select: none;
+}
+
+/*Rodapé do site*/
+footer {
+    background-image: linear-gradient(to top, var(--corPrim), #291b11, #302014);
+    color: var(--corBackg);
+    padding: 20px 10px;
+    box-shadow: 1px -5px 12px 2px rgba(0, 0, 0, 0.158);
+    text-align: center;
+    font-weight: 300;
+
+}
+
+/*Parte 1 - Footer*/
+.footer-info {
+    display: flex;
+    justify-content: center;
+    margin: 3em 0;
+}
+
+/*Estilizando as informações adicionais como numero de contato redes sociais... - Footer*/
+
+.footer-info .footer-info-contact {
+    margin-top: 10px;
+
+}
+
+.footer-info-contact h2 {
+    width: 60%;
+    margin: auto;
+    font-weight: 400;
+    letter-spacing: 0.8px;
+
+}
+
+.footer-info-contact p {
+    margin: 15px 0;
+
+}
+
+p#phone i{
+    color: var(--corSec);
+
+}
+
+.footer-info-contact p#footer-socialmedia a{
+    text-decoration: none;
+    font-size: 25px;
+    margin: 0px 5px;
+    color: var(--corSec);
+    
+}
+
+p#footer-socialmedia i {
+    width: 50px;
+    padding: 12px;
+    border-radius: 50px;
+    background-color: var(--corPrim);
+    transition: 0.3s;
+}
+
+p#footer-socialmedia i:hover {
+
+    color: var(--corPrim);
+    background-color: var(--corSec);
+}
+
+
+/*Parte 1 - Footer - FIM*/
+footer hr {
+   border: 1px solid var(--corSec);
+   width: 100%;
+   margin: 5px 0;
+}
+
+.final-info {
+    font-size: 14px;
+}
+
+span#color-name {
+    color: var(--corSec);
+}
+
+
+@media screen and (max-width:830px) {
+    /*Menu responsivo*/
+    header .menu-icon {
+        display: block;
+
+    }
+
+    header .nav-login {
+        margin: 0;
+        width: 100%;
+        height: calc(100vh - 140px);
+        background-image: linear-gradient(to bottom, var(--corPrim), #291b11, #302014);
+        position: absolute;
+        top: 140px;
+        left: -100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: all 200ms ease-out;
+        z-index: 100;
+    }
+
+    header .nav-login.active {
+        left: 0;
+    }
+
+    header .nav-login ul {
+        flex-direction: column;
+        font-size: 30px;
+
+    }
+
+    header .nav-login i {
+        width: 60px;
+        height: 60px;
+        padding-top: 15px;
+        font-size: 30px;
+    }
+
+    header .nav-login ul ul {
+        position: static;
+        font-size: 28px;
+        width: 100%;
+
+    }
+
+    /*Definindo uma margin para as listas principais*/
+    header .nav-login ul li {
+        margin: 30px 0px;
+    }
+
+    /*Definindo uma margin para as Sub-listas*/
+    header .nav-login ul ul li {
+        margin: 10px 0px;
+    }
+
+    header .nav-login ul ul li a{
+        display: block;
+        padding: 0 20px;
+
+    }  
+
+    .dp-li:hover,
+    .nav-login ul ul {
+        background-color: var(--corPrim);
+    }
+
+    .nav-login ul ul hr {
+        border: 0;
+
+    }
+}
+
+@media screen and (max-width:768px) {
+    
+
+    /*Footer responsivo*/
+    .footer-info {
+        flex-direction: column;
+    }
+
+    .footer-info .footer-info-form {
+        width: 100%;
+    }
+    
+    .footer-info-contact {
+        margin-right: 0 !important;
+
+    }
+
+    .footer-info-form {
+        margin: auto!important;
+
+    }
+
+    
+
+}

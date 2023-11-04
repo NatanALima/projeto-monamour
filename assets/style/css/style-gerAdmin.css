@@ -1,0 +1,87 @@
+/*Adicionando Fontes para o site*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --corBackg: #f4f0e5;
+    --corPrim: #24180F;
+    --corSec: #FFBD4A;
+    --fontPrim: 'Roboto Slab', serif;
+    --fontSec: 'Architects Daughter', cursive;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: 0.2s;
+
+}
+
+body {
+    font-family: var(--fontPrim);
+    background-color: var(--corBackg);
+    position: relative;
+}
+
+main {  
+    margin: 10em 5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+main h1 {
+    text-decoration: underline;
+}
+
+section {
+    position: relative;
+    background-color: white;
+    margin: 35px 0;
+    padding: 20px 15px;
+    border-radius: 2px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.123);
+    width: 562px;
+    max-width: 70vw;
+}
+
+section p.nomeinfo {
+    color: var(--corPrim);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 14px;
+    margin: 10px 0 5px;
+
+}
+
+section p.info {
+    background-color: #f1f1f1;
+    padding: 10px;
+    user-select: none;
+
+}
+
+section div {
+    margin: 30px 0 10px;
+    text-align: center;
+}
+
+section a {
+    padding: 10px 5px;
+    text-decoration: none;
+    color: var(--corSec);
+    background-color: var(--corPrim);
+
+}
+
+section a:hover {
+    color: var(--corPrim);
+    background-color: var(--corSec);
+    
+}
