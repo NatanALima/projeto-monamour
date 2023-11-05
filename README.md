@@ -6,9 +6,9 @@ Este é um projeto que foi desenvolvido com o objetivo de sanar todos os princip
 
 Bem... Essa é uma parte da história fictícia utilizada por mim como base para o desenvolvimento do Trabalho de Conclusão de Curso (TCC) de Análise e Desenvolvimento de Sistemas.
 
-Embora a história não seja real, muito menos a empresa, os problemas continuam sendo problemas, correto? E é com base neles que este projeto foi desenvolvido.
+Embora a história não seja real, assim como a empresa, os problemas continuam sendo problemas, correto? E é com base neles que este projeto foi desenvolvido.
 
-Que a verdade seja dita, o principal e real objetivo deste projeto é apenas a obtenção de conhecimento/experiência. E é claro... Desenvolver o TCC também.
+Que a verdade seja dita, o principal e real objetivo deste projeto é apenas a obtenção de conhecimento/experiência. E é claro... <sub>O desenvolvimento do TCC também</sub>.
 
 ## Imagens do Projeto
 ![Tela Inicial](https://i.imgur.com/1KFTsvy.png)
