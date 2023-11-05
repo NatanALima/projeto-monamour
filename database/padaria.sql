@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 24-Set-2022 às 03:03
+-- Tempo de geração: 10-Ago-2022 às 03:44
 -- Versão do servidor: 10.4.22-MariaDB
 -- versão do PHP: 8.1.2
 
@@ -20,8 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Banco de dados: `padaria`
 --
-CREATE DATABASE IF NOT EXISTS `padaria` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
-USE `padaria`;
 
 -- --------------------------------------------------------
 
@@ -41,11 +39,10 @@ CREATE TABLE `tb_categoria` (
 --
 
 INSERT INTO `tb_categoria` (`ID`, `CATEGORIA`, `CREATED`, `MODIFIED`) VALUES
-(1, 'Pães', '2022-08-07 17:32:51', '2022-09-18 00:52:32'),
+(1, 'Pães', '2022-08-07 17:32:51', NULL),
 (2, 'Bolos e Tortas', '2022-08-07 17:32:52', NULL),
 (3, 'Salgados', '2022-08-07 17:32:52', NULL),
-(4, 'Bebidas', '2022-08-07 17:32:52', NULL),
-(8, 'Doces', '2022-08-15 18:30:48', NULL);
+(4, 'Bebidas', '2022-08-07 17:32:52', NULL);
 
 -- --------------------------------------------------------
 
@@ -57,7 +54,6 @@ CREATE TABLE `tb_compra` (
   `ID` int(11) NOT NULL,
   `ID_ENDERECO` int(11) NOT NULL,
   `TIPO_PAG` varchar(50) NOT NULL,
-  `TOTAL` decimal(10,2) DEFAULT NULL,
   `STATUS_PEDIDO` varchar(50) DEFAULT NULL,
   `DATA_COMPRA` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -66,15 +62,13 @@ CREATE TABLE `tb_compra` (
 -- Extraindo dados da tabela `tb_compra`
 --
 
-INSERT INTO `tb_compra` (`ID`, `ID_ENDERECO`, `TIPO_PAG`, `TOTAL`, `STATUS_PEDIDO`, `DATA_COMPRA`) VALUES
-(18, 2, 'CREDITO', '62.50', 'ABERTO', '2022-02-20 18:57:42'),
-(19, 2, 'CREDITO', '14.50', 'A CAMINHO', '2022-02-20 18:59:01'),
-(20, 3, 'CREDITO', '30.50', 'ABERTO', '2022-02-20 20:34:49'),
-(21, 2, 'CREDITO', '60.79', 'ABERTO', '2022-02-20 21:12:46'),
-(22, 2, 'CREDITO', '9.75', 'A CAMINHO', '2022-03-05 23:25:14'),
-(23, 2, 'CREDITO', '12.25', 'ABERTO', '2022-08-08 22:07:27'),
-(24, 2, 'CREDITO', '22.75', 'ABERTO', '2022-08-15 22:36:46'),
-(25, 2, 'PIX', '19.86', 'ABERTO', '2022-08-15 23:32:00');
+INSERT INTO `tb_compra` (`ID`, `ID_ENDERECO`, `TIPO_PAG`, `STATUS_PEDIDO`, `DATA_COMPRA`) VALUES
+(18, 2, '', 'ABERTO', '2022-02-20 18:57:42'),
+(19, 2, '', 'A CAMINHO', '2022-02-20 18:59:01'),
+(20, 3, '', 'ABERTO', '2022-02-20 20:34:49'),
+(21, 2, '', 'ABERTO', '2022-02-20 21:12:46'),
+(22, 2, '', 'A CAMINHO', '2022-03-05 23:25:14'),
+(23, 2, '', 'ABERTO', '2022-08-08 22:07:27');
 
 -- --------------------------------------------------------
 
@@ -104,11 +98,7 @@ INSERT INTO `tb_endereco` (`ID`, `ID_USER`, `CEP`, `CIDADE`, `ESTADO`, `BAIRRO`,
 (1, 1, '18730-005', 'ITAÍ', 'SP', 'CENTRO', 'RUA PROFESSOR JOSÉ DE OLIVEIRA', 21, 'ESTABELECIMENTO', '2021-12-24 21:23:29', NULL),
 (2, 2, '18730-009', 'Itaí', 'SP', 'Centro', 'Rua Salustiano Soares de Oliveira', 87, 'CASA', '2021-12-24 22:08:15', '2021-12-26 16:43:28'),
 (3, 3, '18730-015', 'Itaí', 'SP', 'Centro', 'Rua Nove de Julho', 120, 'CASA', '2021-12-25 16:47:56', NULL),
-(4, 4, '18730-019', 'Itaí', 'SP', 'Centro', 'Rua Aristides Pires', 752, 'CASA', '2022-03-01 19:13:41', NULL),
-(5, 5, '18730-025', 'ItaÃ­', 'SP', 'Centro', 'Via CapitÃ£o CezÃ¡rio', 41, 'CASA', '2022-08-22 08:19:01', NULL),
-(6, 6, '18730-142', 'Itaí', 'SP', 'Jardim Planalto', 'Rua Hamad Musa Ali', 150, 'CASA', '2022-08-28 22:09:43', NULL),
-(7, 7, '18730-005', 'ITAÍ', 'SP', 'CENTRO', 'RUA PROFESSOR JOSÉ DE OLIVEIRA', 21, 'ESTABELECIMENTO', '2022-08-28 22:25:23', NULL),
-(8, 8, '18730-005', 'ITAÍ', 'SP', 'CENTRO', 'RUA PROFESSOR JOSÉ DE OLIVEIRA', 21, 'ESTABELECIMENTO', '2022-09-18 17:00:06', NULL);
+(4, 4, '18730-019', 'Itaí', 'SP', 'Centro', 'Rua Aristides Pires', 752, 'CASA', '2022-03-01 19:13:41', NULL);
 
 -- --------------------------------------------------------
 
@@ -142,11 +132,7 @@ INSERT INTO `tb_itens_compra` (`ID`, `ID_COMPRA`, `ID_PRODUTO`, `QTD`, `SUBTOTAL
 (11, 21, 24, 1, '41.34'),
 (12, 21, 26, 1, '3.95'),
 (13, 22, 1, 1, '9.75'),
-(14, 23, 7, 1, '12.25'),
-(15, 24, 58, 1, '10.50'),
-(16, 24, 7, 1, '12.25'),
-(17, 25, 58, 1, '10.50'),
-(18, 25, 49, 2, '10.40');
+(14, 23, 7, 1, '12.25');
 
 -- --------------------------------------------------------
 
@@ -203,16 +189,7 @@ INSERT INTO `tb_produtos` (`ID`, `IMG`, `CATEG`, `NOME_PROD`, `DESCRICAO`, `PREC
 (39, '4d8935b81d3d392e480d0d67f42d09cd.png', 4, 'Fanta Laranja (600ml)', 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus, quaerat dignissimos. Accusantium nisi quod dolores, facere voluptate ducimus ipsum libero sit, beatae ipsam, ut in. Laboriosam ducimus earum rem qui', '4.50', '2022-02-20 21:05:46', '2022-02-20 21:10:45'),
 (40, '84ef89a552c45d4a739053ccc595a2df.png', 4, 'Fanta Uva (600ml)', 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus, quaerat dignissimos. Accusantium nisi quod dolores, facere voluptate ducimus ipsum libero sit, beatae ipsam, ut in. Laboriosam ducimus earum rem qui', '4.50', '2022-02-20 21:06:04', '2022-02-20 21:10:54'),
 (41, 'a840400f77a1fcaa4665c93fe226a08d.png', 4, 'Sprite (600ml)', 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus, quaerat dignissimos. Accusantium nisi quod dolores, facere voluptate ducimus ipsum libero sit, beatae ipsam, ut in. Laboriosam ducimus earum rem qui', '4.30', '2022-02-20 21:06:27', '2022-02-20 21:11:02'),
-(42, '1faf12154c133fe0b7807a0678f3c7a0.png', 4, 'Suco Laranja (500ml)', 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus, quaerat dignissimos. Accusantium nisi quod dolores, facere voluptate ducimus ipsum libero sit, beatae ipsam, ut in. Laboriosam ducimus earum rem qui', '5.00', '2022-02-20 21:07:02', '2022-02-20 21:11:09'),
-(49, '027029b4d21c41b080612c7efc331930.png', 8, 'Bomba de Chocolate', 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus, quaerat dignissimos. Accusantium nisi quod dolores, facere voluptate ducimus ipsum libero sit, beatae ipsam, ut in. Laboriosam ducimus earum rem qui', '5.20', '2022-08-15 18:34:47', '2022-08-15 18:34:55'),
-(51, '1744f6214609a451faae01a47b91a047.png', 8, 'Carolina (chocolate Branco)', 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus, quaerat dignissimos. Accusantium nisi quod dolores, facere voluptate ducimus ipsum libero sit, beatae ipsam, ut in. Laboriosam ducimus earum rem qui', '2.50', '2022-08-15 18:35:58', NULL),
-(52, 'c481ed8a14bae5140de9b57c81950e29.png', 8, 'Brownie de Chocolate', 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus, quaerat dignissimos. Accusantium nisi quod dolores, facere voluptate ducimus ipsum libero sit, beatae ipsam, ut in. Laboriosam ducimus earum rem qui', '8.75', '2022-08-15 18:36:25', NULL),
-(53, '566df40e58b1cd982420058f9bd23248.png', 8, 'Mil folhas (creme)', 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus, quaerat dignissimos. Accusantium nisi quod dolores, facere voluptate ducimus ipsum libero sit, beatae ipsam, ut in. Laboriosam ducimus earum rem qui', '8.90', '2022-08-15 18:36:53', NULL),
-(54, 'f4dc694752688a0bdc52635bc741e797.png', 8, 'Sonho (1 Unid.)', 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus, quaerat dignissimos. Accusantium nisi quod dolores, facere voluptate ducimus ipsum libero sit, beatae ipsam, ut in. Laboriosam ducimus earum rem qui', '5.20', '2022-08-15 18:38:00', '2022-08-15 18:38:58'),
-(55, '03cdd00b25091209b6b092741e159649.png', 8, 'Quindim(1 Un.)', 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus, quaerat dignissimos. Accusantium nisi quod dolores, facere voluptate ducimus ipsum libero sit, beatae ipsam, ut in. Laboriosam ducimus earum rem qui', '3.20', '2022-08-15 18:39:37', '2022-08-15 18:40:31'),
-(56, 'a14de5289bbb6889d0f6d16754e7d054.png', 8, 'Cupcake (chocolate)', 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus, quaerat dignissimos. Accusantium nisi quod dolores, facere voluptate ducimus ipsum libero sit, beatae ipsam, ut in. Laboriosam ducimus earum rem qui', '9.90', '2022-08-15 18:41:20', NULL),
-(57, 'f2918f48212f3f51312843c6f4cbd4c5.png', 8, 'Cupcake (morango)', 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus, quaerat dignissimos. Accusantium nisi quod dolores, facere voluptate ducimus ipsum libero sit, beatae ipsam, ut in. Laboriosam ducimus earum rem qui', '9.90', '2022-08-15 18:41:43', NULL),
-(58, '4f117ebb27e3ce8ed1f362d043149555.png', 8, 'Cupcake Especial', 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus, quaerat dignissimos. Accusantium nisi quod dolores, facere voluptate ducimus ipsum libero sit, beatae ipsam, ut in. Laboriosam ducimus earum rem qui', '10.50', '2022-08-15 18:42:07', NULL);
+(42, '1faf12154c133fe0b7807a0678f3c7a0.png', 4, 'Suco Laranja (500ml)', 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus, quaerat dignissimos. Accusantium nisi quod dolores, facere voluptate ducimus ipsum libero sit, beatae ipsam, ut in. Laboriosam ducimus earum rem qui', '5.00', '2022-02-20 21:07:02', '2022-02-20 21:11:09');
 
 -- --------------------------------------------------------
 
@@ -222,7 +199,6 @@ INSERT INTO `tb_produtos` (`ID`, `IMG`, `CATEG`, `NOME_PROD`, `DESCRICAO`, `PREC
 
 CREATE TABLE `tb_user` (
   `ID` int(11) NOT NULL,
-  `ACESSO` int(11) NOT NULL,
   `NOME` varchar(220) NOT NULL,
   `SOBRENOME` varchar(220) NOT NULL,
   `EMAIL` varchar(220) NOT NULL,
@@ -236,15 +212,11 @@ CREATE TABLE `tb_user` (
 -- Extraindo dados da tabela `tb_user`
 --
 
-INSERT INTO `tb_user` (`ID`, `ACESSO`, `NOME`, `SOBRENOME`, `EMAIL`, `DATANASC`, `SENHA`, `CREATED`, `MODIFIED`) VALUES
-(1, 3, 'ADMIN', 'ADMIN111', 'monamourpadaria@gmail.com', '1999-01-01', '3f7caa3d471688b704b73e9a77b1107f', '2021-12-24 21:18:53', NULL),
-(2, 1, 'claudio', 'pereira', 'pereiraclaudio123@gmail.com', '1995-02-01', '14af0fd9322ea4a8815d86f0aa13c566', '2021-12-24 22:08:00', '2022-08-07 16:54:41'),
-(3, 1, 'claudio', 'oliveira', 'claudiooliveira002@gmail.com', '1995-04-01', 'd3a3881c252dc21a141084bf52fa446b', '2021-12-25 16:47:40', NULL),
-(4, 1, 'Arnaldo', 'Silva', 'arnaldosilva2022@outlook.com', '1995-05-05', 'd025cd3608a5d2db78726e3fb5b4f71d', '2022-03-01 19:12:21', NULL),
-(5, 1, 'Robson', 'Henrique', 'robson123@gmail.com', '1995-01-01', '832afa4b80d27500686c14f0566fcec9', '2022-08-22 08:19:01', NULL),
-(6, 1, 'Rafael', 'Gomes', 'gomesrafael123@gmail.com', '1995-01-01', '4311a3b1bfd11e5892eded8505ff460d', '2022-08-28 22:09:43', NULL),
-(7, 2, 'ADMIN2', 'ADMIN222', 'adminpadaria2022@gmail.com', '1991-01-01', '8ee03b6b48e30df1c5779acb360bedae', '2022-08-28 22:25:23', '2022-08-29 00:03:13'),
-(8, 1, 'Giovani', 'Souza', 'souzaGiovani123@gmail.com', '1991-02-01', '5acc5f31e975731a8bc4c3061835a487', '2022-09-18 17:00:06', '2022-09-18 17:05:59');
+INSERT INTO `tb_user` (`ID`, `NOME`, `SOBRENOME`, `EMAIL`, `DATANASC`, `SENHA`, `CREATED`, `MODIFIED`) VALUES
+(1, 'ADMIN', 'ADMIN111', 'monamourpadaria@gmail.com', '1999-01-01', '3f7caa3d471688b704b73e9a77b1107f', '2021-12-24 21:18:53', NULL),
+(2, 'claudio', 'pereira', 'pereiraclaudio123@gmail.com', '1995-02-01', '14af0fd9322ea4a8815d86f0aa13c566', '2021-12-24 22:08:00', '2022-08-07 16:54:41'),
+(3, 'claudio', 'oliveira', 'claudiooliveira002@gmail.com', '1995-04-01', 'd3a3881c252dc21a141084bf52fa446b', '2021-12-25 16:47:40', NULL),
+(4, 'Arnaldo', 'Silva', 'arnaldosilva2022@outlook.com', '1995-05-05', 'd025cd3608a5d2db78726e3fb5b4f71d', '2022-03-01 19:12:21', NULL);
 
 --
 -- Índices para tabelas despejadas
@@ -299,37 +271,37 @@ ALTER TABLE `tb_user`
 -- AUTO_INCREMENT de tabela `tb_categoria`
 --
 ALTER TABLE `tb_categoria`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de tabela `tb_compra`
 --
 ALTER TABLE `tb_compra`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT de tabela `tb_endereco`
 --
 ALTER TABLE `tb_endereco`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de tabela `tb_itens_compra`
 --
 ALTER TABLE `tb_itens_compra`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT de tabela `tb_produtos`
 --
 ALTER TABLE `tb_produtos`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=59;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
 
 --
 -- AUTO_INCREMENT de tabela `tb_user`
 --
 ALTER TABLE `tb_user`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Restrições para despejos de tabelas
