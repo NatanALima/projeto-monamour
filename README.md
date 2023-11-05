@@ -36,4 +36,4 @@ O projeto se trata de um website e o mesmo foi desenvolvido utilizando as tecnol
 
 Para fazer o uso do projeto é necessário fazer o uso do XAMPP, Wamp ou EasyPHP (permite a criação de um servidor local).
 
-Depois adicione a base de dados que está localizada na pasta _database_ no PhpMyAdmin
+Feito isso, adicione a base de dados que está localizada na pasta _database_ no PhpMyAdmin
